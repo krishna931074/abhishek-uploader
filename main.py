@@ -32,19 +32,19 @@ bot = Client(
     bot_token=BOT_TOKEN)
 
 
-@bot.on_message(filters.command(["start"]))
+@bot.on_message(filters.command(["start2"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n➨ I am Txt to Video Uploader Bot.\n\n➨ Bot Made By Tushar.\n\n➨ For Use Me Send /tushar.</b>")
+    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n➨ I am Txt to Video Uploader Bot.</b>")
   
 
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("stop2"))
 async def restart_handler(_, m):
     await m.reply_text("**𝗦𝘁𝗼𝗽𝗽𝗲𝗱**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["tushar"]))
+@bot.on_message(filters.command(["tushar2"]))
 async def upload(bot: Client, m: Message):
     editable = await m.reply_text('⚡️𝗦𝗘𝗡𝗗 𝗧𝗫𝗧 𝗙𝗜𝗟𝗘⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -79,7 +79,7 @@ async def upload(bot: Client, m: Message):
     await input1.delete(True)
     
 
-    await editable.edit("**𝗘𝗡𝗧𝗘𝗥 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡📸**\n𝟭𝟰𝟰,𝟮𝟰𝟬,𝟯𝟲𝟬,𝟰𝟴𝟬,𝟳𝟮𝟬,𝟭𝟬𝟴𝟬 𝗽𝗹𝗲𝗮𝘀𝗲 𝗰𝗵𝗼𝗼𝘀𝗲 𝗾𝘂𝗮𝗹𝗶𝘁𝘆")
+    await editable.edit("**𝗘𝗡𝗧𝗘𝗥 𝗥𝗘𝗦𝗢𝗟𝗨𝗧𝗜𝗢𝗡📸**\n𝟭𝟰𝟰,𝟮𝟰𝟬,𝟯𝟲𝟬,𝟰𝟴𝟬,𝟳𝟮𝟬,𝟭𝟬𝟴𝟬")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -182,8 +182,8 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**♻️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.({res}).Tushar.mkv**\n\n\n**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**' 
-                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**♻️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.Tushar.pdf**\n\n\n**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**'
+                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.({res}).Tushar.mkv**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**' 
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.Tushar.pdf**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
