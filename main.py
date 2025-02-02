@@ -158,7 +158,7 @@ async def upload(bot: Client, m: Message):
            
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
-             url =  "https://madxapi-d0cbf6ac738c.herokuapp.com/" + id + "/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzgzMjk2NTIuNTAyLCJkYXRhIjp7Il9pZCI6IjY2NTM1YmIxNGE1YjZhN2NiM2EwMzAzYiIsInVzZXJuYW1lIjoiOTUwODYwNTI1OSIsImZpcnN0TmFtZSI6IkFiaGlzaGVrIiwibGFzdE5hbWUiOiJUaGFrdXIiLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwiZW1haWwiOiJhYmhpc2hlazcyNTQ4NUBnbWFpbC5jb20iLCJyb2xlcyI6WyI1YjI3YmQ5NjU4NDJmOTUwYTc3OGM2ZWYiXSwiY291bnRyeUdyb3VwIjoiSU4iLCJ0eXBlIjoiVVNFUiJ9LCJpYXQiOjE3Mzc3MjQ4NTJ9.mRWT-khhl7Y-cxRdgaoX4mdXRegaU0KbTX9wxhuw0oQ"
+             url =  "https://madxapi-d0cbf6ac738c.herokuapp.com/" + id + "/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzg5ODkzNjguNTQ3LCJkYXRhIjp7Il9pZCI6IjYyYmE2YmMyMTdhN2VlMDAxMTU4NDFlMCIsInVzZXJuYW1lIjoiNzU3MDgxMDIwNSIsImZpcnN0TmFtZSI6IkFiaGlzaGVrIFZlcm1hIiwibGFzdE5hbWUiOiJWZXJtYSIsIm9yZ2FuaXphdGlvbiI6eyJfaWQiOiI1ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODkiLCJ3ZWJzaXRlIjoicGh5c2ljc3dhbGxhaC5jb20iLCJuYW1lIjoiUGh5c2ljc3dhbGxhaCJ9LCJlbWFpbCI6ImFiaGlzaGVrdmVybWE1NTE3NUBnbWFpbC5jb20iLCJyb2xlcyI6WyI1YjI3YmQ5NjU4NDJmOTUwYTc3OGM2ZWYiXSwiY291bnRyeUdyb3VwIjoiSU4iLCJ0eXBlIjoiVVNFUiJ9LCJpYXQiOjE3MzgzODQ1Njh9.fWEq5dqc8HHFzdM7AFOSd5EMKu4tWFbaewMOb0LPDdk"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
@@ -182,8 +182,8 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.({res}).Tushar.mkv**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**' 
-                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** » {name1}.Tushar.pdf**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** » **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** » **{raw_text3}**'
+                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**' 
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.pdf**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -209,7 +209,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⬇️𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆⬇️... »**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `I Don't Know`"
+                    Show = f"**⬇️𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆⬇️... »**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
