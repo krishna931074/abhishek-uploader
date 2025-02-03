@@ -32,12 +32,12 @@ bot = Client(
     bot_token=BOT_TOKEN)
 
 
-@bot.on_message(filters.command(["start2"]))
+@bot.on_message(filters.command(["start"]))
 async def start(bot: Client, m: Message):
     await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n➨ I am Txt to Video Uploader Bot.</b>")
   
 
-@bot.on_message(filters.command("stop2"))
+@bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
     await m.reply_text("**𝗦𝘁𝗼𝗽𝗽𝗲𝗱**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -182,8 +182,8 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**' 
-                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.pdf**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**'
+                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.({res}).𝔗𝔲𝔰𝔥𝔞𝔯.mkv**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**' 
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n\n**☘️𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.𝔗𝔲𝔰𝔥𝔞𝔯.pdf**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -209,7 +209,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⬇️𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆⬇️... »**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `{url}`"
+                    Show = f"**💥𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆💥**\n\n**📝ɴᴀᴍᴇ » **`{name}\n\n❄ǫᴜᴀʟɪᴛʏ » {raw_text2}`\n\n**🔗ᴜʀʟ »** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -226,7 +226,7 @@ async def upload(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**😎✅𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗼𝗻𝗲✅😎**")
+    await m.reply_text("**🥳✅𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗼𝗻𝗲✅🥳**")
 
 
 bot.run()
