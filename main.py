@@ -113,6 +113,15 @@ async def upload(bot: Client, m: Message):
     else:
         MR = raw_text3
    
+    await editable.edit("**𝗘𝗻𝘁𝗲𝗿 𝗣𝘄 𝗧𝗼𝗸𝗲𝗻 𝗙𝗼𝗿 𝗣𝘄 𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗼𝗿 𝗦𝗲𝗻𝗱 `'noo'` 𝗙𝗼𝗿 𝗢𝘁𝗵𝗲𝗿𝘀**")
+    input4: Message = await bot.listen(editable.chat.id)
+    raw_text4 = input4.text
+    await input4.delete(True)
+    if raw_text4 == 'noo':
+        MR = token
+    else:
+        MR = raw_text4
+        
     await editable.edit("𝗡𝗼𝘄 𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗧𝗵𝘂𝗺𝗯 𝗨𝗿𝗹\n\n𝗢𝗿 𝗜𝗳 𝗗𝗼𝗻'𝘁 𝗪𝗮𝗻𝘁 𝗧𝗵𝘂𝗺𝗯𝗻𝗮𝗶𝗹 𝗦𝗲𝗻𝗱 = 𝗻𝗼")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
@@ -158,7 +167,7 @@ async def upload(bot: Client, m: Message):
            
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
-             url =  "https://madxapi-d0cbf6ac738c.herokuapp.com/" + id + "/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzk0NDQ3ODkuOTc3LCJkYXRhIjp7Il9pZCI6IjYyYmE2YmMyMTdhN2VlMDAxMTU4NDFlMCIsInVzZXJuYW1lIjoiNzU3MDgxMDIwNSIsImZpcnN0TmFtZSI6IkFiaGlzaGVrIFZlcm1hIiwibGFzdE5hbWUiOiJWZXJtYSIsIm9yZ2FuaXphdGlvbiI6eyJfaWQiOiI1ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODkiLCJ3ZWJzaXRlIjoicGh5c2ljc3dhbGxhaC5jb20iLCJuYW1lIjoiUGh5c2ljc3dhbGxhaCJ9LCJlbWFpbCI6ImFiaGlzaGVrdmVybWE1NTE3NUBnbWFpbC5jb20iLCJyb2xlcyI6WyI1YjI3YmQ5NjU4NDJmOTUwYTc3OGM2ZWYiXSwiY291bnRyeUdyb3VwIjoiSU4iLCJ0eXBlIjoiVVNFUiJ9LCJpYXQiOjE3Mzg4Mzk5ODl9.3gjx5Ro691nA3HRgBmnP8oZz3h-LybRVO37YjmdygF0"
+             url =  f"https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token={raw_text4}"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
